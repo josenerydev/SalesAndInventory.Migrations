@@ -5,3 +5,6 @@
 
 # Run the command to create the database
 /opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U SA -P "YourStrong!Passw0rd" -i create_database.sql
+
+# Run the migrations using Evolve CLI
+evolve migrate sqlserver -c "Server=localhost,1433;Database=SalesAndInventoryTest;User Id=SA;Password=YourStrong!Passw0rd;" --location "./db/migrations"
