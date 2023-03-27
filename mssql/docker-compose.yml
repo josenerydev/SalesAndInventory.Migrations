@@ -3,8 +3,8 @@ version: '3.8'
 services:
   mssql:
     build:
-      context: .
-      dockerfile: mssql.Dockerfile
+      context: ../
+      dockerfile: mssql/mssql.Dockerfile
     environment:
       ACCEPT_EULA: 'Y'
       SA_PASSWORD: 'YourStrong!Passw0rd'
